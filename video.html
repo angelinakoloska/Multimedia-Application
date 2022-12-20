@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="./assets/css/video.css">
+</head>
+    <header>
+        <nav>
+            <a href="./index.html" class="nav-link">Hjem</a>
+            <a href="./photography.html" class="nav-link">Foto</a>
+            <a href="./video.html" class="nav-link active">Video</a>
+            <a href="./canvas.html" class="nav-link">Canvas</a>
+            <a href="./animation.html" class="nav-link">Animasjon</a>
+        </nav>
+    </header>
+    <div id="video-container">
+        <div id="vid-screen">
+            <video id="video">
+                <source src="./assets/media/vid/workday_vid_1080.mov">
+            </video>
+        </div>
+    </div>
+    <div class="video-btn">
+        <button id="playPauseBtn">
+            <img src="./assets/media/icons/play-icon.svg" alt="play">
+        </button>
+        <button id="backToStartBtn">
+            <img src="./assets/media/icons/skipStart-icon.svg" alt="BackToStart">
+        </button>
+        <button id="rewindBtn">
+            <img src="./assets/media/icons/skipBackward-icon.svg" alt="skipBackward">
+        </button>
+        <button id="fastForwardBtn">
+            <img src="./assets/media/icons/skipForward-icon.svg" alt="skipForward">
+        </button>
+        <button id="loopBtn">
+            <img src="./assets/media/icons/loop-fill-icon.svg" alt="loop">
+        </button>
+    </div>
+    <div id="desc">
+        <h2>Beskrivelse</h2>
+        <p id="info">Denne videoen viser min typiske arbeidsdag ☕️</p>
+    </div>
+    <script src="./assets/js/video_page.js"></script>
+    <!--
+        // Get the video
+var video = document.querySelector('#myVideo');
+
+// play and pause button
+document.querySelector('#playPauseBtn').addEventListener('click', () => {
+    if (VideoColorSpace.pause) {
+        VideoColorSpace.play();
+         // Adding HTML code to get the pause icon
+        playPauseBtn.innerHTML = `<img src="./assets//media/icons/pause-icon.svg" alt="pause">`;
+    } else {
+        VideoColorSpace.pause();
+         // Adding HTML code to get the pause icon
+        playPauseBtn.innerHTML = `<img src="./assets/media/icons/play-icon.svg" alt="play">`;
+    }
+})
+
+// back to start button
+document.querySelector('#backToStart').addEventListener('click', () => {
+    video.pause();
+    video.currentTime = 0;
+    video.load();
+    // The icon will change to the play icon instead of pause
+    playPauseBtn.innerHTML = `<img src="./assets/media/icons/play-icon.svg" alt="play">`;
+})
+
+// rewind button
+document.querySelector('#rewindBtn').addEventListener('click', () => {
+    // Finds the current time of the video and takes away 2 seconds of the video - as a result it will rewind two seconds
+    video.currentTime = video.currentTime - 2;
+})
+
+// fast forward button
+document.querySelector('#fastForwardBtn').addEventListener('click', () => {
+    // Finds the current time of the video, and it will add 2 seconds - as a result it will forward the video by two seconds
+    video.currentTime = video.currentTime + 2;
+})
+
+// loop button
+var loopBtn = document.querySelector('#loopBtn');
+loopBtn.addEventListener('click', loop);
+function loop() {
+    if (video.loop == true) {
+        // The loop button is inactive
+        video.loop() = false;
+        loop.style.border = '0px';
+    } else {
+        // The loop button is active
+        video.loop() = true;
+        loopBtn.style.border = '4.5px solid darkgreen';
+    }
+}
+
+var info = document.querySelector('#info');
+info.innerHTML = 'Denne videoen viser min typiske arbeidsdag ☕️'
+
+
+    -->
+</body>
+</html>
