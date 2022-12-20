@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&family=Space+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: Poppins, 'Space Mono';
+    font-size: 100%;
+}
+
+header {
+    /*background-color: #121a39;*/
+    background-color: #000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    height: 70px;
+}
+
+nav .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav .nav-link:hover {
+    transition: 0.5s;
+    color: rgba(12, 207, 246, 0.894);
+}
+
+nav .active {
+    text-decoration: underline;
+    color: rgba(12, 207, 246, 0.894);
+}
